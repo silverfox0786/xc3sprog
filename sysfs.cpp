@@ -10,10 +10,10 @@
 
 #include <iostream>
 
-const int TDIPin = 22;
-const int TMSPin = 4;
-const int TCKPin = 17;
-const int TDOPin = 27;
+const int TDIPin = 13;
+const int TMSPin = 6;
+const int TCKPin = 26;
+const int TDOPin = 19;
 
 IOSysFsGPIO::IOSysFsGPIO()
     : tck_fd(-1), tms_fd(-1), tdi_fd(-1), tdo_fd(-1), one("1"), zero("0") {
