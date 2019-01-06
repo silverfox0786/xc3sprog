@@ -1,19 +1,3 @@
-
-# Installation
-```
-# Add repo and key
-curl https://apt.matrix.one/doc/apt-key.gpg | sudo apt-key add -
-echo "deb https://apt.matrix.one/raspbian $(lsb_release -sc) main" | sudo tee /etc/apt/sources.list.d/matrixlabs.list
-
-# Update packages and install
-sudo apt-get update
-sudo apt-get upgrade
-
-#Installation
-sudo apt install matrixio-xc3sprog
-
-```
-
 # Spartan3, XCF and CPLD JTAG programmer and other utilities
 
 Copyright (C) 2004 Andrew Rogers
@@ -40,12 +24,15 @@ Public License
 This program should run without installation. For accessing USB cables, `libusb0`
 is required as runtime dynamic linked library.
 
-To compile, you need `CMAKE`, the static `libftdi` library and `usb.h`. 
+To compile, you need `CMAKE`, the static `libftdi-dev` library and `usb.h`. 
 
 ## Compilation
 
 ```
-$ mkdir build; cd build; cmake ..; make
+$ cd xc3sprog
+$ cmake .
+$ make
+$ sudo make install
 ```
 To crosscompile for Win32 with mingw:
 
